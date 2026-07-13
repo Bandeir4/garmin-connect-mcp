@@ -1,0 +1,69 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+[mcp_servers.garmin]
+command = "node"
+args = ["C:/Users/ADOMINGU/Develop/dev_ADG/garmin-connect-mcp/build/index.js"]
+cwd = "C:/Users/ADOMINGU/Develop/dev_ADG/garmin-connect-mcp"
+
+env_vars = [
+  "GARMIN_EMAIL",
+  "GARMIN_PASSWORD"
+]
+
+enabled = true
+required = false
+startup_timeout_sec = 30
+tool_timeout_sec = 120
+
+disabled_tools = [
+  "set_activity_name",
+  "create_manual_activity",
+  "delete_activity",
+  "add_weigh_in",
+  "set_hydration",
+  "set_blood_pressure",
+  "add_gear_to_activity",
+  "remove_gear_from_activity"
+]
+
+[mcp_servers.garmin.tools.count_activities]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_activities]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_last_activity]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_activity_typed_splits]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_activity_splits]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_activity_details]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_activities_by_date]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_activity_types]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_sleep_data]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_vo2max]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_body_battery]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_daily_health_snapshot]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_training_readiness]
+approval_mode = "approve"
+
+[mcp_servers.garmin.tools.get_training_status]
+approval_mode = "approve"
